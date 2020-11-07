@@ -8,11 +8,26 @@ void draw() {
   
 }
 
+void colorearForma() {
+  color c = color(mouseX/2, mouseY/2, 0);
+  fill(c);
+}
+
+void dibujaCirculo(int diametro, int linea, int gris){
+  strokeWeight(linea);
+  stroke(gris);
+  ellipse(mouseX, mouseY, diametro, diametro);
+}
+
+int calculaTriple(int num){
+  int resultado = num * 3;
+  return resultado;
+}
+
 void mousePressed () {
   colorearForma();                  //también puedo llamar a "color
-  ellipse(mouseX, mouseY, 40, 40);
-}
-void colorearForma() {
-  color c = color(255, 255, 0);
-  fill(c);
+  
+  int cajita = calculaTriple(40);
+  
+  dibujaCirculo(cajita, 5, 0);
 }
