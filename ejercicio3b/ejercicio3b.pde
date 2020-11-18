@@ -2,10 +2,8 @@
 // quepan en la distanca que va hasta "posH". "tam" es la altura del vertical del rectángulo que se traslada.
 
 float posH, tam, r;
-
 int numCir; //entposH; // Número de círculos que se van a dibujar, que depende de "posH" (distancia
 // desde la ccordenada horizontal 0 hasta donde comienza el rectángulo vertical)
-
 float gris; // Variable que se utiliza para el color RGB del rectángulo
 
 
@@ -27,11 +25,12 @@ void draw(){
   fill(0);
   
   //rect(0, 200, posH, 20);
-  if(r ) {
+  /*if(25 %r = ) {
     numCir =
-  }
-  fill(255,0,128);
-  ellipse(0,200,20,20);
+  }  */
+
+   
+
  
   
   noStroke();  
@@ -47,3 +46,12 @@ void draw(){
     
  }
 } // Aquí se cierra el "draw"
+
+ void crearReticula() {
+  for(int i=0; i< posH; i+= 25) {    //lineas horizontales
+    //line(0, i, width,i);
+  
+  fill(255,0,128);
+  ellipse(0,200,20,20);
+  }
+ }
